@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   def update
     user_id = params.fetch("user_id")
     matching_users = User.where({ :id => user_id })
-    @user = matching_users.at(0)
+    user = matching_users.at(0)
     
     user.username = params.fetch("query_username")
     user.save

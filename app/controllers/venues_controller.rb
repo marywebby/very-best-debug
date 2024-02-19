@@ -16,7 +16,7 @@ class VenuesController < ApplicationController
   end
 
   def create
-    @venue = Venue.new
+    venue = Venue.new
     venue.address = params.fetch("query_address")
     venue.name = params.fetch("query_name")
     venue.neighborhood = params.fetch("query_neighborhood")
